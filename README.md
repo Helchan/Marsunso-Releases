@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Version](https://img.shields.io/badge/version-1.2.5-blue.svg)](https://github.com/Helchan/Marsunso.git)
+[![Version](https://img.shields.io/badge/version-1.2.6-blue.svg)](https://github.com/Helchan/Marsunso.git)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Chrome](https://img.shields.io/badge/chrome-88%2B-brightgreen.svg)](https://www.google.com/chrome/)
 
@@ -82,6 +82,12 @@ Marsunso 是一个轻量级的 Chrome 书签快捷搜索插件，旨在解决传
   - **URL 编辑**：修改书签的网址（文件夹无此项）
   - **位置移动**：通过文件夹树选择器，将书签移动到其他文件夹
   - **文件夹树禁用**：编辑文件夹时，自身及子孙文件夹不可选（防止循环）
+  - **目录树键盘导航**（v1.2.6 新增）：
+    - **↑ ↓ 键**：在目录树中快速切换相邻节点，支持循环导航
+    - **→ ← 键**：展开/折叠选中节点，无需鼠标点击
+    - **Enter 键**：保存编辑
+    - **ESC 键**：取消编辑
+  - **位置标签**（v1.2.6 新增）：目录树上方显示"位置"标签，说明目录树用途
   - **目录树右键管理**（v1.2.5 新增）：
     - **修改**：直接在目录树中原位编辑文件夹名称，支持 Enter 保存、ESC 取消
     - **删除**：删除选中的文件夹节点，弹出确认对话框防止误删除
