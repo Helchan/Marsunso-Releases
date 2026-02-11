@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Version](https://img.shields.io/badge/version-1.2.6-blue.svg)](https://github.com/Helchan/Marsunso.git)
+[![Version](https://img.shields.io/badge/version-1.2.7-blue.svg)](https://github.com/Helchan/Marsunso.git)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Chrome](https://img.shields.io/badge/chrome-88%2B-brightgreen.svg)](https://www.google.com/chrome/)
 
