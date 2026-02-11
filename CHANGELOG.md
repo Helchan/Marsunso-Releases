@@ -2,6 +2,76 @@
 
 本文档记录 Marsunso 书签快捷搜索插件的所有版本变更历史。
 
+## [1.2.7] - 2025-01-27
+
+### 架构优化
+
+#### 快捷键配置化管理
+本次更新将所有功能快捷键（除浏览器插件激活快捷键 Ctrl+K/Command+K 外）统一迁移到配置文件中管理，支持用户自定义快捷键组合。
+
+**核心改进**：
+- 在 `config.js` 的 `DEFAULT_CONFIG` 中新增 `keyBindings` 配置项
+- 将原来硬编码在 `popup.js` 中的快捷键全部改为配置驱动
+- 支持跨平台修饰键自动适配（Mac 用 Command，其他平台用 Ctrl）
+
+**配置结构**：
+```javascript
+keyBindings: {
+  // 配置格式: { modifiers: ['cmdOrCtrl', 'alt', 'shift'], key: 'KeyboardEvent.key值' }
+  
+  // 搜索面板 (Search Panel) - 10个快捷键
+  moveUp, moveDown, jumpToFirst, jumpToLast,
+  navigateUp, navigateDown,
+  openItem, openInBackground, clearInput, closePanel,
+  
+  // 右键菜单 (Context Menu) - 1个
+  hideContextMenu,
+  
+  // 编辑对话框 (Edit Dialog) - 6个
+  editSave, editCancel,
+  treeNavigateUp, treeNavigateDown, treeExpand, treeCollapse,
+  
+  // 目录树右键菜单 (Tree Context Menu) - 1个
+  hideTreeContextMenu,
+  
+  // 目录树节点编辑 (Tree Node Edit) - 2个
+  treeNodeConfirm, treeNodeCancel,
+  
+  // 确认对话框 (Confirm Dialog) - 2个
+  confirmOk, confirmCancel,
+  
+  // 提示对话框 (Alert Dialog) - 2个
+  alertClose, alertConfirm
+}
+```
+
+**技术实现**：
+- 新增 `matchKeyBinding(event, binding)` 函数：通用快捷键匹配逻辑
+- 重构 `handleKeyDown()` 函数：从配置读取快捷键
+- 重构 `handleGlobalKeyDown()` 函数：弹出窗口也使用配置驱动
+- 重构 `handlePopupKeyDown()` 函数：统一使用配置
+
+**配置文件注释增强**：
+- 添加完整的键位映射表格（键盘符号 → 配置值）
+- 修饰键说明采用表格格式，清晰展示 Mac/Windows 映射
+- 每个快捷键添加中文注释说明功能用途
+- 按面板分组，便于快速定位
+
+**用户价值**：
+- 支持通过 DevTools Console 自定义快捷键
+- 保持向后兼容，默认值与原硬编码行为一致
+- 为未来添加设置界面预留空间
+
+### 影响文件
+
+| 文件 | 变更类型 | 说明 |
+|------|---------|------|
+| `manifest.json` | 修改 | 版本号更新：1.2.6 → 1.2.7 |
+| `scripts/config.js` | 修改 | 新增 keyBindings 配置项，包含 24 个快捷键配置 |
+| `popup.js` | 修改 | 新增 matchKeyBinding() 函数，重构键盘事件处理函数 |
+
+---
+
 ## [1.2.6] - 2026-01-26
 
 ### 新增功能
