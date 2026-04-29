@@ -17,10 +17,9 @@
 ## 产品简介
 
 Marsunso 是一个轻量级的 Chrome 书签快捷搜索插件，旨在解决传统书签管理的效率问题。通过类似 macOS Spotlight 的交互体验，用户可以快速搜索、导航和访问书签，无需在书签栏中逐层点击。
-<img width="549" height="417" alt="image" src="https://github.com/user-attachments/assets/01ea52d2-e2ed-41d2-8bc5-d85f442122c2" />
 
 
-<img width="554" height="423" alt="image" src="https://github.com/user-attachments/assets/4e4edb5a-8d29-4683-88eb-5d0f478d0b37" />
+
 
 
 
