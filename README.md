@@ -366,11 +366,6 @@ Marsunso 是一个轻量级的 Chrome 书签快捷搜索插件，旨在解决传
 - 在 [Issues](https://github.com/Helchan/Marsunso/issues) 页面提交功能建议
 - 请详细描述您希望的功能以及使用场景
 
-### 用户支持
-
-- **GitHub Discussions**：[https://github.com/Helchan/Marsunso/discussions](https://github.com/Helchan/Marsunso/discussions) - 与其他用户交流使用心得
-- **项目主页**：[https://github.com/Helchan/Marsunso](https://github.com/Helchan/Marsunso)
-
 ### 开发者文档
 
 如果您是开发者，想要了解技术实现细节或参与项目贡献，请查阅 [Marsunso产品说明书.md](Marsunso产品说明书.md)。
